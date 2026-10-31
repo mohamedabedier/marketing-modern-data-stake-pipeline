@@ -1,0 +1,91 @@
+[0m20:39:18.448676 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7acb9ed0b800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7acb9b56a1e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7acb9a3a69f0>]}
+
+
+============================== 20:39:18.452762 | 4f20decb-7060-40c4-ba31-10b3fcc00388 ==============================
+[0m20:39:18.452762 [info ] [MainThread]: Running with dbt=1.13.0-b1
+[0m20:39:18.453367 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'log_path': 'logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'target_path': 'None', 'use_colors': 'True', 'static_parser': 'True', 'hints_enabled': 'True', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'warn_error': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'invocation_command': 'dbt init marketing_dbt', 'empty': 'None', 'quiet': 'False', 'partial_parse': 'True', 'profiles_dir': '/home/mohamedabedier/.dbt', 'fail_fast': 'False', 'introspect': 'True', 'debug': 'False', 'version_check': 'True', 'no_print': 'None', 'printer_width': '80'}
+[0m20:39:18.453855 [debug] [MainThread]: Tracking: tracking
+[0m20:39:18.465635 [info ] [MainThread]: Creating dbt configuration folder at /home/mohamedabedier/.dbt
+[0m20:39:18.468148 [debug] [MainThread]: Starter project path: /home/mohamedabedier/marketing_modern_stack_project/.venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m20:39:18.476640 [info ] [MainThread]: Setting up your profile.
+[0m20:39:49.073934 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m20:39:49.074514 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m20:39:49.074915 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m20:49:25.110070 [info ] [MainThread]: Profile marketing_dbt written to /home/mohamedabedier/.dbt/profiles.yml using target's profile_template.yml and your supplied values.
+[0m20:49:25.169715 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m20:49:25.177931 [info ] [MainThread]: dbt version: 1.13.0-b1
+[0m20:49:25.179437 [info ] [MainThread]: python version: 3.12.3
+[0m20:49:25.179995 [info ] [MainThread]: python path: /home/mohamedabedier/marketing_modern_stack_project/.venv/bin/python3
+[0m20:49:25.180773 [info ] [MainThread]: os info: Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+[0m20:49:25.371131 [info ] [MainThread]: Using profiles dir at /home/mohamedabedier/.dbt
+[0m20:49:25.371671 [info ] [MainThread]: Using profiles.yml file at /home/mohamedabedier/.dbt/profiles.yml
+[0m20:49:25.372052 [info ] [MainThread]: Using dbt_project.yml file at /home/mohamedabedier/marketing_modern_stack_project/marketing_dbt/dbt_project.yml
+[0m20:49:25.375857 [info ] [MainThread]: adapter type: snowflake
+[0m20:49:25.376691 [info ] [MainThread]: adapter version: 1.12.3
+[0m20:49:25.554998 [info ] [MainThread]: Configuration:
+[0m20:49:25.555600 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:49:25.556155 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m20:49:25.556856 [info ] [MainThread]: Required dependencies:
+[0m20:49:25.558762 [debug] [MainThread]: Executing "git --help"
+[0m20:49:25.618357 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:49:25.619084 [debug] [MainThread]: STDERR: "b''"
+[0m20:49:25.619628 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:49:25.620153 [info ] [MainThread]: Connection:
+[0m20:49:25.620674 [info ] [MainThread]:   account: QGAUKSF-CF11950
+[0m20:49:25.621474 [info ] [MainThread]:   user: AIRBYTE_USER
+[0m20:49:25.622637 [info ] [MainThread]:   database: MARKETING_DW
+[0m20:49:25.623706 [info ] [MainThread]:   warehouse: AIRBYTE_WH
+[0m20:49:25.625247 [info ] [MainThread]:   role: AIRBYTE_ROLE
+[0m20:49:25.626373 [info ] [MainThread]:   schema: DBT_TRANSFORM
+[0m20:49:25.627621 [info ] [MainThread]:   authenticator: None
+[0m20:49:25.628558 [info ] [MainThread]:   oauth_client_id: None
+[0m20:49:25.629637 [info ] [MainThread]:   query_tag: None
+[0m20:49:25.630394 [info ] [MainThread]:   client_session_keep_alive: False
+[0m20:49:25.631007 [info ] [MainThread]:   host: None
+[0m20:49:25.631745 [info ] [MainThread]:   port: None
+[0m20:49:25.632466 [info ] [MainThread]:   proxy_host: None
+[0m20:49:25.633069 [info ] [MainThread]:   proxy_port: None
+[0m20:49:25.633471 [info ] [MainThread]:   protocol: None
+[0m20:49:25.633884 [info ] [MainThread]:   connect_retries: 1
+[0m20:49:25.634258 [info ] [MainThread]:   connect_timeout: None
+[0m20:49:25.634678 [info ] [MainThread]:   retry_on_database_errors: False
+[0m20:49:25.635061 [info ] [MainThread]:   retry_all: False
+[0m20:49:25.635410 [info ] [MainThread]:   insecure_mode: False
+[0m20:49:25.635801 [info ] [MainThread]:   reuse_connections: True
+[0m20:49:25.636271 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m20:49:25.637012 [info ] [MainThread]:   workload_identity_provider: None
+[0m20:49:25.638581 [info ] [MainThread]:   workload_identity_entra_resource: None
+[0m20:49:25.640068 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m20:49:25.644234 [info ] [MainThread]: Registered adapter: snowflake=1.12.3
+[0m20:49:26.003741 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m20:49:26.019941 [debug] [MainThread]: Using snowflake connection "debug"
+[0m20:49:26.020778 [debug] [MainThread]: On debug: select 1 as id
+[0m20:49:26.021779 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:49:28.484661 [debug] [MainThread]: SQL status: SUCCESS 1 in 2.463 seconds
+[0m20:49:28.486609 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:49:28.487395 [info ] [MainThread]: [32mAll checks passed![0m
+[0m20:49:28.488616 [info ] [MainThread]: Your new dbt project "marketing_dbt" was created!
+Initialized new project in /home/mohamedabedier/marketing_modern_stack_project/marketing_dbt/marketing_dbt
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m20:49:28.496868 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 609.94604, "process_in_blocks": "33504", "process_kernel_time": 0.940193, "process_mem_max_rss": "150464", "process_out_blocks": "104", "process_user_time": 3.342466}
+[0m20:49:28.503464 [debug] [MainThread]: Command `dbt init` succeeded at 20:49:28.502443 after 609.95 seconds
+[0m20:49:28.505182 [debug] [MainThread]: Connection 'debug' was left open.
+[0m20:49:28.505878 [debug] [MainThread]: On debug: Close
+[0m20:49:28.751525 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7acb9d3839e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7acb97881f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7acb98c0b5f0>]}
+[0m20:49:28.755923 [debug] [MainThread]: Flushing usage events
+[0m20:49:29.665375 [debug] [MainThread]: An error was encountered while trying to flush usage events

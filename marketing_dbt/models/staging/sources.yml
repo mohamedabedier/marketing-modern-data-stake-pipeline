@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: airbyte_raw
+    database: MARKETING_DW
+    schema: RAW_DATA
+    tables:
+      - name: CUSTOMERS
+      - name: ORDERS
+      - name: ORDER_ITEMS
+      - name: AD_CAMPAIGNS
+      - name: CAMPAIGN_DAILY_PERFORMANCE
+      - name: '"BRONZE/WEB_EVENTS/"'

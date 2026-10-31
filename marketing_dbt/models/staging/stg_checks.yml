@@ -1,0 +1,68 @@
+version: 2
+
+models:
+  - name: stg_customers
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+      - name: email_address
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_orders
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
+      - name: order_status
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['pending', 'completed', 'cancelled', 'shipped', 'processing', 'returned']
+
+  - name: stg_order_items
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_orders')
+              field: order_id
+      - name: product_id
+        tests:
+          - not_null
+
+  - name: stg_ad_campaigns
+    columns:
+      - name: campaign_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_campaign_performance
+    columns:
+      - name: campaign_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_ad_campaigns')
+              field: campaign_id
+              config:
+                severity: warn
+
+  - name: stg_web_events
+    columns:
+      - name: event_id
+        tests:
+          - unique
+          - not_null
